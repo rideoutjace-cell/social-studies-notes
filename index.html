@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Social Studies Quiz Prep</title>
+    <title>Social Studies Notes</title>
     <style>
-        body { background-color: #1a1a1a; color: #00ff00; font-family: 'Courier New', Courier, monospace; text-align: center; padding: 50px; }
-        h1 { font-size: 24px; }
-        iframe { border: 3px solid #333; width: 90%; height: 600px; border-radius: 10px; }
+        body { font-family: sans-serif; text-align: center; background: #121212; color: white; }
+        .game-card { border: 1px solid #444; padding: 10px; margin: 10px; display: inline-block; cursor: pointer; }
+        iframe { width: 100%; height: 600px; border: none; display: none; }
     </style>
 </head>
 <body>
-    <h1>Unit 4: Global History Review</h1>
-    <p>Please complete the interactive module below before the bell rings.</p>
-    
-    <!-- This is a link to a popular unblocked game (Papa's Pizzeria) -->
-    <iframe src="https://images-opensocial.googleusercontent.com"></iframe>
-    
-    <p style="margin-top: 20px; color: #555;">© 2024 Educational Resources Inc.</p>
+    <h1>Study Resources</h1>
+    <div id="menu">
+        <div class="game-card" onclick="playGame('https://3kh0.github.io')">Resource 1 (Slope)</div>
+        <!-- Add more games here -->
+    </div>
+    <iframe id="game-frame"></iframe>
+
+    <script>
+        function playGame(url) {
+            document.getElementById('menu').style.display = 'none';
+            var frame = document.getElementById('game-frame');
+            frame.src = url;
+            frame.style.display = 'block';
+        }
+    </script>
 </body>
 </html>
